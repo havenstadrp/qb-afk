@@ -4,10 +4,6 @@ game 'gta5'
 description 'QB-AFK'
 version '1.0.0'
 
-client_scripts {
-    'client/main.lua',
-}
-
-server_scripts {
-    'server/main.lua',
-}
+shared_script '@qb-core/import.lua'
+client_script 'client/main.lua'
+server_script 'server/main.lua'

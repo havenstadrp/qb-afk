@@ -1,7 +1,3 @@
-QBCore = nil
-
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-
 RegisterServerEvent("KickForAFK")
 AddEventHandler("KickForAFK", function()
 	DropPlayer(source, "You Have Been Kicked For Being AFK")
