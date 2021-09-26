@@ -2,7 +2,6 @@
 local group = 'user'
 local secondsUntilKick = 1800
 local QBCore = exports['qb-core']:GetCoreObject()
-local isLoggedIn = LocalPlayer.state['isLoggedIn']
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
@@ -19,9 +18,9 @@ end)
 -- Code
 Citizen.CreateThread(function()
 	while true do
-		Wait(1000)
+        Wait(1000)
         playerPed = PlayerPedId()
-        if isLoggedIn then
+        if LocalPlayer.state['isLoggedIn'] then
             if group == 'user' then
                 currentPos = GetEntityCoords(playerPed, true)
                 if prevPos ~= nil then
